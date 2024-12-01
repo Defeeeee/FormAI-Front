@@ -1,0 +1,348 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #0f121a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    padding-left: 60px; /* Add left padding for separation */
+    padding-right: 60px; /* Add right padding for separation */
+    margin-right: auto; /* Ensure the container is aligned to the left */
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+/* Header Styles */
+.header {
+    background-color: #141721;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; /* Vertically align all items in the header */
+    justify-content: space-between;
+}
+
+.header.scrolled {
+    background-color: #0e1119;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Vertically align the logo */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu-derecha {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the profile link to the right */
+}
+
+.nav {
+    display: flex;
+    align-items: center; /* Vertically align the nav items */
+    justify-content: flex-start; /* Justify nav items to the left */
+    flex-grow: 1; /* Allow nav to take up remaining space */
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    margin-left: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700; /* Make links bold */
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #00adb5;
+}
+
+.nav a:not(.profile-link):hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00adb5;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav a:not(.profile-link):hover::before {
+    transform: scaleX(1);
+}
+
+.nav .active {
+    color: #00adb5;
+}
+
+.nav .active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00adb5;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.profile-icon {
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Hero Styles */
+.hero {
+    background-color: #141721;
+    padding: 120px 0;
+    text-align: center;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://img.freepik.com/free-vector/blank-blue-halftone-background_53876-114466.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(20, 23, 33, 0.8), rgba(15, 18, 25, 0.2));
+}
+
+.hero-content {
+    max-width: 100%;
+    /* Take full container width */
+    z-index: 1;
+    position: relative;
+}
+
+.hero-text {
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0; /* Remove margin */
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00adb5;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #008a90;
+}
+
+/* Features Styles */
+.features {
+    padding: 80px 0;
+    background-color: #0f121a;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #141721;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #00adb5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.feature-icon i {
+    font-size: 36px;
+    color: #fff;
+}
+
+.feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.feature p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Benefits Styles */
+.benefits {
+    background-color: #141721;
+    padding: 80px 0;
+}
+
+.benefits h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.benefit {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #0f121a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    font-size: 48px;
+    color: #00adb5;
+    margin-bottom: 20px;
+}
+
+.benefit h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.benefit p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Call to Action Styles */
+.cta {
+    background-color: #0f121a;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0e1119;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Scroll Animation Styles */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
