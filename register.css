@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f121a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.register-container {
+    background-color: #141721;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.register-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.register-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #1f242d;
+    color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #00adb5;
+    box-shadow: 0 0 5px rgba(0, 173, 181, 0.5);
+}
+
+.register-button {
+    background-color: #00adb5;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.register-button:hover {
+    background-color: #008a90;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.login-link a {
+    color: #00adb5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #008a90;
+}
+/* ... other styles ... */
+
+.error-message {
+    color: #f00;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.error {
+    border-color: #f00; /* Add a red border to the input field with the error */
+}
+
+.success-message {
+    color: #00c851; /* Green color for success messages */
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out; /* Add a fade-in-up animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
