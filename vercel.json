@@ -22,7 +22,7 @@
     },
     {
       "source": "/perfil",
-      "destination": "/perfil.html"
+      "destination": "/perfil/perfil.html"
     }
   ]
 }
