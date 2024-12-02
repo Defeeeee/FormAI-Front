@@ -54,10 +54,13 @@ loginForm.addEventListener('submit', async (event) => {
             console.log('Inicio de sesión exitoso:', data);
 
             // Store the token in sessionStorage
-            sessionStorage.setItem('authToken', data.token);
+            sessionStorage.setItem('token', data.token);
+
+            // Store the user ID in sessionStorage
+            sessionStorage.setItem('id', data.id);
 
             // Redirect to the home page or a protected page
-            window.location.href = 'home';
+            window.location.href = '/dashboard';
         } else {
             const errorData = await response.json();
             // Handle specific error messages from the API

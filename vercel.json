@@ -13,16 +13,8 @@
       "destination": "/html/login.html"
     },
     {
-      "source": "/historial",
-      "destination": "/html/historial.html"
-    },
-    {
-      "source": "/subir-video",
-      "destination": "/html/subir-video.html"
-    },
-    {
-      "source": "/perfil",
-      "destination": "/html/perfil.html"
+      "source": "/dashboard",
+        "destination": "/html/dashboard.html"
     }
   ]
 }
