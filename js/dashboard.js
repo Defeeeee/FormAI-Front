@@ -173,9 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(data => {
                     // Handle successful upload
-                    alert(`Video subido correctamente. Predicción de la IA: ${data.correct ? 'Correcto' : 'Incorrecto'}`);
-                    // Refresh video history after successful upload
-                    fetchVideoHistory();
+                    const videoVisualizerUrl = `video-visualizer?url=${encodeURIComponent(data.videoUrl)}&prediction=${encodeURIComponent(data.correct ? 'Correcto' : 'Incorrecto')}`;
+                    window.location.href = videoVisualizerUrl;
                 })
                 .catch(error => {
                     // Handle errors
