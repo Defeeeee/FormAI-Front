@@ -6,19 +6,19 @@
     },
     {
       "source": "/register",
-      "destination": "/register.html"
+      "destination": "/register/register.html"
     },
     {
       "source": "/login",
-      "destination": "/login.html"
+      "destination": "/login/login.html"
     },
     {
       "source": "/historial",
-      "destination": "/historial.html"
+      "destination": "/historial/historial.html"
     },
     {
       "source": "/subir-video",
-      "destination": "/subir-video.html"
+      "destination": "/upload/subir-video.html"
     },
     {
       "source": "/perfil",
