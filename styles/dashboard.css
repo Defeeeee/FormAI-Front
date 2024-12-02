@@ -286,3 +286,76 @@ h3 {
 .loading-indicator i {
     margin-right: 5px;
 }
+
+/* ... other styles ... */
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hide the button by default */
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Media Query for smaller screens */
+/* ... other styles ... */
+
+/* Media Query for smaller screens */
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        margin: 0 auto; /* Center the toggle button */
+    }
+
+    .menu-derecha {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust top position as needed */
+        left: 50%;
+        transform: translateX(-50%); /* Center the dropdown menu */
+        width: 100%;
+        background-color: #141721;
+        padding: 20px;
+        border-bottom: 1px solid #222; /* Add a bottom border */
+        text-align: center; /* Center the text within the dropdown */
+    }
+
+    .menu-derecha.show {
+        display: flex; /* Show the menu when toggled */
+    }
+
+    .menu-derecha ul {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        gap: 10px; /* Add some space between the items */
+    }
+
+    .nav {
+        justify-content: center; /* Center the nav items */
+    }
+
+    .logo {
+        margin: 0 auto; /* Center the logo */
+        display: flex;
+        justify-content: center; /* Center the logo horizontally */
+    }
+    .dashboard-content {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .video-history,
+    .upload-video {
+        flex: 1; /* Ensure sections take full width */
+    }
+
+    .upload-sections {
+        flex-direction: column; /* Stack upload sections vertically */
+    }
+}
+
+/* ... rest of your CSS ... */
+
+/* ... rest of your CSS ... */

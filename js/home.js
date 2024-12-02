@@ -77,35 +77,3 @@ images.forEach(image => {
     imgObserver.observe(image);
 });
 
-// Form Validation (Example for a Contact Form)
-
-const contactForm = document.querySelector('#contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const nameInput = document.querySelector('#name');
-        const emailInput = document.querySelector('#email');
-        const messageInput = document.querySelector('#message');
-
-        if (nameInput.value === '') {
-            alert('Por favor, ingresa tu nombre.');
-            return;
-        }
-
-        if (emailInput.value === '') {
-            alert('Por favor, ingresa tu correo electrónico.');
-            return;
-        }
-
-        if (messageInput.value === '') {
-            alert('Por favor, ingresa tu mensaje.');
-            return;
-        }
-
-        // Here you would typically submit the form data to your server
-        alert('¡Formulario enviado con éxito!');
-        contactForm.reset();
-    });
-}

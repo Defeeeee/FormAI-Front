@@ -39,26 +39,28 @@ h3 {
     padding: 15px 20px;
 }
 
-.logo {
-    display: flex;
-    align-items: center; /* Vertically align the logo */
-}
+
+
 
 .logo img {
     height: 40px;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between logo and buttons */
+    width: 100%;
+}
+
+.logo {
+    margin-right: auto; /* Push the logo to the left */
+}
+
 .menu-derecha {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Push the profile link to the right */
-}
-
-.nav {
-    display: flex;
-    align-items: center; /* Vertically align the nav items */
-    justify-content: flex-start; /* Justify nav items to the left */
-    flex-grow: 1; /* Allow nav to take up remaining space */
+    gap: 20px; /* Add some space between the buttons */
 }
 
 .nav ul {
@@ -349,4 +351,39 @@ h3 {
 
 .highlight {
     color: #00adb5;
+}
+/* styles.css */
+/* Button Styles */
+.btn-register, .btn-login {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #00adb5;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-register:hover, .btn-login:hover {
+    background-color: #008a90;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column; /* Stack logo and buttons vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .logo {
+        margin-right: 0; /* Remove right margin on logo */
+        margin-bottom: 20px; /* Add bottom margin to separate from buttons */
+    }
+
+    .menu-derecha {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-start; /* Align buttons to the left */
+    }
 }

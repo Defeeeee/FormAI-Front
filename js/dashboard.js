@@ -190,3 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// ... other JavaScript ...
+
+const menuToggle = document.querySelector('.menu-toggle');
+const menuDerecha = document.querySelector('.menu-derecha');
+
+menuToggle.addEventListener('click', () => {
+    menuDerecha.classList.toggle('show');
+    menuToggle.style.display = menuDerecha.classList.contains('show') ? 'none' : 'block'; // Toggle button visibility
+});
