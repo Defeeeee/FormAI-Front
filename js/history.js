@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         listItem.innerHTML = `
                             <span>Video ${video.localId} - ${ejercicio} (${correcto})</span>
-                            <a href="${videoVisualizerUrl}" target="_blank">Ver video</a>
+                            <a href="${videoVisualizerUrl}">Ver video</a>
                         `;
                         videoList.appendChild(listItem);
                     });
