@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         })
                         .then(videos => {
                             // Assuming the latest video is the first one in the sorted array
-                            const latestVideoUrl = videos.length > 0 ? videos[0].url : null;
+                            const latestVideoUrl = videos.length > 0 ? videos[videos.length - 1].url : null;
 
                             if (latestVideoUrl) {
                                 // Redirect to video visualizer
