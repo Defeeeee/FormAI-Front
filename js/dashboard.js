@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loadingIndicator) {
                 loadingIndicator.hidden = false;
             } else {
-                console.error('Loading indicator not found.', dropZone); // Log the dropZone to inspect it
+                console.error('Loading indicator not found.', dropZone);
                 return;
             }
 
@@ -145,9 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if userId and token are available
             if (!userId || !token) {
                 console.error('User ID or token not found in session storage.');
-                loadingIndicator.hidden = true; // Hide loading indicator
+                loadingIndicator.hidden = true;
                 alert('Error: No se pudo obtener la información del usuario.');
-                return; // Stop execution if authentication is missing
+                return;
             }
 
             const formData = new FormData();
@@ -163,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: formData
             })
                 .then(response => {
-                    loadingIndicator.hidden = true; // Hide loading indicator
                     if (!response.ok) {
                         return response.json().then(data => {
                             throw new Error(data.message || 'Error al subir el video.');
@@ -172,13 +171,38 @@ document.addEventListener('DOMContentLoaded', () => {
                     return response.json();
                 })
                 .then(data => {
-                    // Handle successful upload
-                    const videoVisualizerUrl = `video-visualizer?url=${encodeURIComponent(data.videoUrl)}&prediction=${encodeURIComponent(data.correct ? 'Correcto' : 'Incorrecto')}`;
-                    window.location.href = videoVisualizerUrl;
+                    // Fetch the latest video URL from the history
+                    return fetch(`https://db.formaitic.me/videos/usuario/${userId}`, {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Error al obtener el historial de videos.');
+                            }
+                            return response.json();
+                        })
+                        .then(videos => {
+                            // Assuming the latest video is the first one in the sorted array
+                            const latestVideoUrl = videos.length > 0 ? videos[0].url : null;
+
+                            if (latestVideoUrl) {
+                                // Redirect to video visualizer
+                                const videoVisualizerUrl = `video-visualizer?url=${encodeURIComponent(latestVideoUrl)}&prediction=${encodeURIComponent(data.correct ? 'Correcto' : 'Incorrecto')}`;
+                                window.location.href = videoVisualizerUrl;
+                            } else {
+                                // Handle case where no video is found in the history
+                                console.error('No se encontró ningún video en el historial.');
+                                alert('Error: No se pudo obtener la URL del video.');
+                            }
+                        });
                 })
                 .catch(error => {
                     // Handle errors
                     console.error('Error:', error);
+                    loadingIndicator.hidden = true;
                     alert(error.message);
                 });
         }
