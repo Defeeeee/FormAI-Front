@@ -19,7 +19,8 @@
       <div class="menu-derecha">
         <ul>
           <li><a href="index">Inicio</a></li>
-          <li><a href="historial" class="active">Historial</a></li>
+          <li><a href="dashboard" class="active">Dashboard</a></li>
+          <li><a href="historial">Historial</a></li>
           <li><a href="subir-video">Subir Video</a></li>
         </ul>
         <a href="perfil" class="profile-link">
@@ -39,11 +40,38 @@
         <h3>Historial de Videos</h3>
         <ul class="video-list">
         </ul>
+        <div class="history-link">
+          <a href="historial">Ver Historial Completo</a>
+        </div>
       </section>
 
       <section class="upload-video">
         <h3>Subir Nuevo Video</h3>
-        <a href="subir-video" class="upload-button">Ir a Subir Video</a>
+        <div class="upload-sections">
+          <section class="upload-section">
+            <h3>Sentadilla</h3>
+            <div class="drop-zone" data-exercise-id="1">
+              <i class="fas fa-cloud-upload-alt upload-icon"></i>
+              <p>Arrastra y suelta tu video aquí o haz clic para seleccionar</p>
+              <input type="file" class="file-input" accept="video/*" hidden>
+              <div class="loading-indicator" hidden>
+                <i class="fas fa-spinner fa-spin"></i> Subiendo...
+              </div>
+            </div>
+          </section>
+
+          <section class="upload-section">
+            <h3>Plank</h3>
+            <div class="drop-zone" data-exercise-id="2">
+              <i class="fas fa-cloud-upload-alt upload-icon"></i>
+              <p>Arrastra y suelta tu video aquí o haz clic para seleccionar</p>
+              <input type="file" class="file-input" accept="video/*" hidden>
+              <div class="loading-indicator" hidden>
+                <i class="fas fa-spinner fa-spin"></i> Subiendo...
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
     </div>
   </div>
