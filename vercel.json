@@ -14,7 +14,15 @@
     },
     {
       "source": "/dashboard",
-        "destination": "/html/dashboard.html"
+      "destination": "/html/dashboard.html"
+    },
+    {
+      "source": "/historial",
+        "destination": "/html/history.html"
+    },
+    {
+      "source": "/video-visualizer",
+        "destination": "/html/video-visualizer.html"
     }
   ]
 }

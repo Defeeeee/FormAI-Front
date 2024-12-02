@@ -50,10 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         const listItem = document.createElement('li');
                         const ejercicio = video.id_ejercicio === 1 ? 'Sentadilla' : 'Plank';
                         const correcto = video.correcto ? 'Correcto' : 'Incorrecto';
+                        const videoVisualizerUrl = `video-visualizer?url=${encodeURIComponent(video.url)}&prediction=${encodeURIComponent(correcto)}`;
 
                         listItem.innerHTML = `
                             <span>Video ${video.localId} - ${ejercicio} (${correcto})</span>
-                            <a href="${video.url}" target="_blank">Ver video</a>
+                            <a href="${videoVisualizerUrl}" target="_blank">Ver video</a>
                         `;
                         videoList.appendChild(listItem);
                     });

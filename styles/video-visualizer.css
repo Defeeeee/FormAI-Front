@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #0f121a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    padding-left: 60px;
+    /* Add left padding for separation */
+    padding-right: 60px;
+    /* Add right padding for separation */
+    margin-right: auto;
+    /* Ensure the container is aligned to the left */
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+/* Header Styles */
+.header {
+    background-color: #141721;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    /* Vertically align all items in the header */
+    justify-content: space-between;
+}
+
+.header.scrolled {
+    background-color: #0e1119;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Vertically align the logo */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu-derecha {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* Push the profile link to the right */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    /* Vertically align the nav items */
+    justify-content: flex-start;
+    /* Justify nav items to the left */
+    flex-grow: 1;
+    /* Allow nav to take up remaining space */
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    margin-left: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    /* Make links bold */
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #00adb5;
+}
+
+.nav a:not(.profile-link):hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00adb5;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav a:not(.profile-link):hover::before {
+    transform: scaleX(1);
+}
+
+.nav .active {
+    color: #00adb5;
+}
+
+.nav .active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00adb5;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.profile-icon {
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* ... other styles ... */
+
+.video-visualizer-container {
+    padding-top: 0; /* Remove top padding */
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Take full viewport height */
+}
+
+.video-container {
+    display: flex;
+    gap: 40px;
+    align-items: stretch; /* Ensure both containers stretch to the same height */
+    flex-wrap: wrap;
+    max-width: 90vw;
+}
+
+video {
+    width: 60vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-grow: 1; /* Allow video to grow */
+}
+
+.prediction-container {
+    background-color: #141721;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    width: 27vw; /* Adjust width as needed */
+    text-align: center;
+    flex-grow: 1; /* Allow prediction container to grow */
+}
+
+.prediction-container h3 {
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.prediction-result {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00adb5;
+}

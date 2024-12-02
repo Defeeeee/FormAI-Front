@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FōrmAI - Visualizador de Video</title>
+  <link rel="stylesheet" href="../styles/video-visualizer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <div class="logo">
+        <img src="../images/logo.png" alt="FōrmAI Logo">
+      </div>
+      <div class="menu-derecha">
+        <ul>
+          <li><a href="index">Inicio</a></li>
+          <li><a href="dashboard">Dashboard</a></li>
+          <li><a href="historial" class="active">Historial</a></li>
+          <li><a href="subir-video">Subir Video</a></li>
+        </ul>
+        <a href="perfil" class="profile-link">
+          <img src="../images/profile-icon.png" alt="Perfil" class="profile-icon">
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="video-visualizer-container">
+  <div class="container">
+    <h2>Visualizador de Video</h2>
+
+    <div class="video-container">
+      <video id="myVideo" controls width="640" height="360">
+        <source src="" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+
+      <div class="prediction-container">
+        <h3>Predicción de la IA</h3>
+        <div class="prediction-result">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="../js/video-visualizer.js"></script>
+</body>
+</html>
