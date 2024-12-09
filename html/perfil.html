@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FōrmAI - Inicio de Sesión</title>
-  <link rel="stylesheet" href="../styles/login.css">
+  <title>FōrmAI - Perfil</title>
+  <link rel="stylesheet" href="../styles/perfil.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -28,10 +28,14 @@
   </div>
 </header>
 
-<div class="login-container">
-  <img src="../images/logo.png" alt="FōrmAI Logo" class="logo">
+<div class="perfil-container">
+  <img src="../images/profile-icon.png" alt="FōrmAI Logo" class="logo">
 
-  <form id="loginForm" class="login-form">
+  <form id="perfilForm" class="perfil-form">
+    <div class="form-group">
+      <label for="nombre">Nombre de Usuario</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre de usuario" required>
+    </div>
     <div class="form-group">
       <label for="email">Mail</label>
       <input type="email" id="email" name="email" placeholder="Ingrese su correo" required>
@@ -40,14 +44,10 @@
       <label for="password">Contraseña</label>
       <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
     </div>
-    <button type="submit" class="login-button">Iniciar Sesión</button>
+    <button type="submit" class="perfil-button">Actualizar Perfil</button>
   </form>
-
-  <div class="register-link">
-    ¿No tienes cuenta? <a href="../register">Regístrate</a>
-  </div>
 </div>
 
-<script src="../js/login.js"></script>
+<script src="../js/perfil.js"></script>
 </body>
 </html>

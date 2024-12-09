@@ -14,7 +14,19 @@
 <header class="header">
     <div class="container">
         <nav class="nav" id="nav">
-
+            <div class="logo">
+                <img src="../images/logo.png" alt="FŌRMAI Logo">
+            </div>
+            <div class="menu-derecha">
+                <ul>
+                    <li><a href="/" class="active">Inicio</a></li>
+                    <li><a href="dashboard">Dashboard</a></li>
+                    <li><a href="historial">Historial</a></li>
+                </ul>
+                <a href="perfil" class="profile-link">
+                    <img src="../images/profile-icon.png" alt="Perfil" class="profile-icon">
+                </a>
+            </div>
         </nav>
     </div>
 </header>
@@ -104,7 +116,7 @@
 </footer>
 
 <script src="../js/home.js"></script>
-
+<script src="../js/auth.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const navbar = document.getElementById('nav');
@@ -148,6 +160,8 @@
             });
 
         }
+
+        redirectIfNotLoggedIn();
     });
 </script>
 </body>

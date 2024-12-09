@@ -44,11 +44,21 @@
         <h3>Predicción de la IA</h3>
         <div class="prediction-result">
         </div>
+        <div class="tooltip">
+          <i class="fas fa-info-circle"></i>
+          <span class="tooltiptext">Aquí se muestra la predicción de la IA sobre tu ejercicio.</span>
+        </div>
       </div>
     </div>
   </div>
 </main>
 
+<script src="../js/auth.js"></script>
 <script src="../js/video-visualizer.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    redirectIfNotLoggedIn();
+  });
+</script>
 </body>
 </html>

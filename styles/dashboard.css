@@ -2,18 +2,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background-color: #0f121a;
-    color: #fff;
+    background-color: #ffffff;
+    color: #333;
     overflow-x: hidden;
 }
 
 .container {
     padding-left: 60px;
-    /* Add left padding for separation */
     padding-right: 60px;
-    /* Add right padding for separation */
     margin-right: auto;
-    /* Ensure the container is aligned to the left */
 }
 
 h1,
@@ -24,7 +21,7 @@ h3 {
 
 /* Header Styles */
 .header {
-    background-color: #141721;
+    background-color: #ffffff;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -34,19 +31,17 @@ h3 {
     transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
-    /* Vertically align all items in the header */
     justify-content: space-between;
 }
 
 .header.scrolled {
-    background-color: #0e1119;
+    background-color: #f0f0f0;
     padding: 15px 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    /* Vertically align the logo */
 }
 
 .logo img {
@@ -57,17 +52,13 @@ h3 {
     display: flex;
     align-items: center;
     margin-left: auto;
-    /* Push the profile link to the right */
 }
 
 .nav {
     display: flex;
     align-items: center;
-    /* Vertically align the nav items */
     justify-content: flex-start;
-    /* Justify nav items to the left */
     flex-grow: 1;
-    /* Allow nav to take up remaining space */
 }
 
 .nav ul {
@@ -84,9 +75,8 @@ h3 {
 
 .nav a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     font-weight: 700;
-    /* Make links bold */
     transition: color 0.3s ease;
     position: relative;
     padding-bottom: 5px;
@@ -94,7 +84,7 @@ h3 {
 }
 
 .nav a:hover {
-    color: #00adb5;
+    color: #007bff;
 }
 
 .nav a:not(.profile-link):hover::before {
@@ -104,7 +94,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #00adb5;
+    background-color: #007bff;
     transform-origin: left;
     transform: scaleX(0);
     transition: transform 0.2s ease;
@@ -115,7 +105,7 @@ h3 {
 }
 
 .nav .active {
-    color: #00adb5;
+    color: #007bff;
 }
 
 .nav .active::before {
@@ -125,7 +115,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #00adb5;
+    background-color: #007bff;
 }
 
 .profile-link {
@@ -142,7 +132,6 @@ h3 {
 /* Dashboard Styles */
 .dashboard-container {
     padding-top: 80px;
-    /* Space for the fixed header */
     padding-bottom: 40px;
 }
 
@@ -153,83 +142,66 @@ h3 {
 
 .video-history,
 .upload-video {
-    background-color: #141721;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex: 1;
-    /* Equal width for both sections */
 }
 
 .video-history {
-    background-color: #141721;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    display: flex; /* Enable flexbox layout */
-    flex-direction: column; /* Stack elements vertically */
+    display: flex;
+    flex-direction: column;
 }
 
 .video-list {
     list-style: none;
     padding: 0;
-    /* Limit the height of the list */
     overflow-y: auto;
-    /* Add vertical scrollbar if content overflows */
-    flex-grow: 1; /* Allow the list to take up available space */
+    flex-grow: 1;
 }
-
-/* ... rest of your CSS ... */
 
 .video-list li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 20px;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
 }
 
 .video-list li:last-child {
     border-bottom: none;
-    /* Remove border from the last item */
 }
 
 .video-list li:hover {
-    background-color: #1f242d;
+    background-color: #f0f0f0;
 }
 
 .video-list a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-weight: 600;
 }
 
 .video-list span {
-    color: #00adb5;
+    color: #007bff;
     font-weight: 500;
     white-space: nowrap;
-    /* Prevent the span from wrapping */
     overflow: hidden;
-    /* Hide any overflowing text */
     text-overflow: ellipsis;
-    /* Add ellipsis (...) if text overflows */
     max-width: 70%;
-    /* Adjust the max-width as needed */
 }
 
 .history-link {
     text-align: center;
-    /* Center the link */
     margin-top: 20px;
-    /* Add some space above the link */
 }
 
 .history-link a {
     display: inline-block;
-    background-color: #00adb5;
+    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -242,7 +214,7 @@ h3 {
 }
 
 .history-link a:hover {
-    background-color: #008a90;
+    background-color: #0056b3;
 }
 
 .upload-sections {
@@ -251,7 +223,7 @@ h3 {
 }
 
 .upload-section {
-    background-color: #141721;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -268,7 +240,7 @@ h3 {
 }
 
 .drop-zone:hover {
-    border-color: #00adb5;
+    border-color: #007bff;
 }
 
 .upload-icon {
@@ -280,82 +252,72 @@ h3 {
 .loading-indicator {
     margin-top: 20px;
     font-size: 18px;
-    color: #00adb5;
+    color: #007bff;
 }
 
 .loading-indicator i {
     margin-right: 5px;
 }
 
-/* ... other styles ... */
-
 .menu-toggle {
     background: none;
     border: none;
     cursor: pointer;
-    display: none; /* Hide the button by default */
+    display: none;
     font-size: 24px;
-    color: #fff;
+    color: #333;
 }
 
-/* Media Query for smaller screens */
-/* ... other styles ... */
-
-/* Media Query for smaller screens */
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        margin: 0 auto; /* Center the toggle button */
+        margin: 0 auto;
     }
 
     .menu-derecha {
-        display: none; /* Hide the menu by default */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust top position as needed */
+        top: 60px;
         left: 50%;
-        transform: translateX(-50%); /* Center the dropdown menu */
+        transform: translateX(-50%);
         width: 100%;
-        background-color: #141721;
+        background-color: #ffffff;
         padding: 20px;
-        border-bottom: 1px solid #222; /* Add a bottom border */
-        text-align: center; /* Center the text within the dropdown */
+        border-bottom: 1px solid #ddd;
+        text-align: center;
     }
 
     .menu-derecha.show {
-        display: flex; /* Show the menu when toggled */
+        display: flex;
     }
 
     .menu-derecha ul {
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        gap: 10px; /* Add some space between the items */
+        align-items: center;
+        gap: 10px;
     }
 
     .nav {
-        justify-content: center; /* Center the nav items */
+        justify-content: center;
     }
 
     .logo {
-        margin: 0 auto; /* Center the logo */
+        margin: 0 auto;
         display: flex;
-        justify-content: center; /* Center the logo horizontally */
+        justify-content: center;
     }
+
     .dashboard-content {
-        flex-direction: column; /* Stack sections vertically */
+        flex-direction: column;
     }
 
     .video-history,
     .upload-video {
-        flex: 1; /* Ensure sections take full width */
+        flex: 1;
     }
 
     .upload-sections {
-        flex-direction: column; /* Stack upload sections vertically */
+        flex-direction: column;
     }
 }
-
-/* ... rest of your CSS ... */
-
-/* ... rest of your CSS ... */

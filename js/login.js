@@ -2,6 +2,9 @@ const loginForm = document.getElementById('loginForm');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 
+// Regular expression for email validation
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 // Function to display error messages
 function showError(inputField, message) {
     const errorSpan = document.createElement('span');
@@ -19,6 +22,22 @@ function removeError(inputField) {
         inputField.classList.remove('error');
     }
 }
+
+// Real-time validation for email
+emailInput.addEventListener('input', () => {
+    removeError(emailInput);
+    if (!emailRegex.test(emailInput.value)) {
+        showError(emailInput, 'Por favor, ingresa un correo electrónico válido.');
+    }
+});
+
+// Real-time validation for password
+passwordInput.addEventListener('input', () => {
+    removeError(passwordInput);
+    if (passwordInput.value.length < 6) {
+        showError(passwordInput, 'La contraseña debe tener al menos 6 caracteres.');
+    }
+});
 
 loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();

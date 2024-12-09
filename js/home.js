@@ -1,5 +1,3 @@
-// Scroll Animations
-
 function checkScroll() {
     const scrollElements = document.querySelectorAll('.scroll-animation');
 
@@ -16,8 +14,6 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 checkScroll(); // Initial check on page load
 
-// Header Scroll Change
-
 const header = document.querySelector('.header');
 
 function handleScroll() {
@@ -29,8 +25,6 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
-
-// Smooth Scrolling for Navigation Links
 
 const navLinks = document.querySelectorAll('.nav a');
 
@@ -44,8 +38,6 @@ navLinks.forEach(link => {
         });
     });
 });
-
-// Lazy Loading for Images
 
 const images = document.querySelectorAll('img[data-src]');
 
@@ -76,4 +68,3 @@ const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 images.forEach(image => {
     imgObserver.observe(image);
 });
-
