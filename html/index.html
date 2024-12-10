@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FŌRMAI - Tu Entrenador IA para una Forma Perfecta</title>
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -116,54 +117,7 @@
 </footer>
 
 <script src="../js/home.js"></script>
-<script src="../js/auth.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const navbar = document.getElementById('nav');
-        const userId = sessionStorage.getItem('id');
-        const token = sessionStorage.getItem('token');
-
-        if (userId && token) {
-            navbar.innerHTML = `
-<div class="logo">
-                <img src="../images/logo.png" alt="FŌRMAI Logo">
-            </div>
-                    <div class="menu-derecha">
-                <ul>
-                    <li><a href="/" class="active">Inicio</a></li>
-                    <li><a href="dashboard">Dashboard</a></li>
-                    <li><a href="historial">Historial</a></li>
-                </ul>
-                <a href="perfil" class="profile-link">
-                    <img src="../images/profile-icon.png" alt="Perfil" class="profile-icon">
-                </a>
-            </div>
-                `;
-        } else {
-            navbar.innerHTML = `
-<div class="logo">
-                <img src="../images/logo.png" alt="FŌRMAI Logo">
-            </div>
-
-                    <button class="btn-register">Register</button>
-                    <button class="btn-login">Login</button>
-                `;
-            const registerButton = document.querySelector('.btn-register');
-            const loginButton = document.querySelector('.btn-login');
-
-            registerButton.addEventListener('click', () => {
-                window.location.href = '/register';
-            });
-
-            loginButton.addEventListener('click', () => {
-                window.location.href = '/login';
-            });
-
-        }
-
-        redirectIfNotLoggedIn();
-    });
-</script>
+<script src="../js/navbar.js"></script>
 </body>
 
 </html>
