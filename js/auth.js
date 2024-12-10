@@ -9,10 +9,16 @@ function redirectIfNotLoggedIn() {
   }
 }
 
+function redirectIfLoggedIn() {
+  if ((window.location.pathname === '/login' || window.location.pathname === '/register')  && isLoggedIn()) {
+    window.location.href = '/dashboard';
+  }
+}
+
 function logout() {
   sessionStorage.removeItem('token');
   sessionStorage.removeItem('id');
   window.location.href = '/login';
 }
 
-export { redirectIfNotLoggedIn, logout };
+export { redirectIfNotLoggedIn, logout, redirectIfLoggedIn};
