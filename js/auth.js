@@ -4,7 +4,15 @@ function isLoggedIn() {
 }
 
 function redirectIfNotLoggedIn() {
-  if (!isLoggedIn()) {
+  if (window.location.pathname !== '/' && !isLoggedIn()) {
     window.location.href = '/login';
   }
 }
+
+function logout() {
+  sessionStorage.removeItem('token');
+  sessionStorage.removeItem('id');
+  window.location.href = '/login';
+}
+
+export { redirectIfNotLoggedIn, logout };

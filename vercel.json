@@ -24,6 +24,10 @@
     {
       "source": "/video-visualizer",
         "destination": "/html/video-visualizer.html"
+    },
+    {
+      "source": "/perfil",
+      "destination": "/html/perfil.html"
     }
   ]
 }

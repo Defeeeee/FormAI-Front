@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const formData = {
-            nombre: nombreInput.value,
+            usuario: nombreInput.value,
             email: emailInput.value,
-            password: passwordInput.value
+            pass: passwordInput.value
         };
 
         try {

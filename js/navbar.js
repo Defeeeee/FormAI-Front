@@ -3,6 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const userId = sessionStorage.getItem('id');
     const token = sessionStorage.getItem('token');
 
+    const currentPage = window.location.pathname.split('/').pop();
+
+    const menuItems = [
+        { name: 'Inicio', href: '/' },
+        { name: 'Dashboard', href: 'dashboard' },
+        { name: 'Historial', href: 'historial' },
+        { name: 'Perfil', href: 'perfil' }
+    ];
+
+    const menuLinks = menuItems.map(item => {
+        const isActive = currentPage === item.href ? 'active' : '';
+        return `<li><a href="${item.href}" class="${isActive}">${item.name}</a></li>`;
+    }).join('');
+
     if (userId && token) {
         navbar.innerHTML = `
             <div class="logo">
@@ -10,13 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="menu-derecha">
                 <ul>
-                    <li><a href="/" class="active">Inicio</a></li>
-                    <li><a href="dashboard">Dashboard</a></li>
-                    <li><a href="historial">Historial</a></li>
+                    ${menuLinks}
                 </ul>
-                <a href="perfil" class="profile-link">
-                    <img src="../images/profile-icon.png" alt="Perfil" class="profile-icon">
-                </a>
             </div>
         `;
     } else {
@@ -24,8 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="logo">
                 <img src="../images/logo.png" alt="FōrmAI Logo">
             </div>
-            <button class="btn-register">Register</button>
-            <button class="btn-login">Login</button>
+            <div class="menu-derecha">
+                <ul>
+                    ${menuLinks}
+                </ul>
+                <button class="btn-register">Register</button>
+                <button class="btn-login">Login</button>
+            </div>
         `;
         const registerButton = document.querySelector('.btn-register');
         const loginButton = document.querySelector('.btn-login');
@@ -38,4 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = '/login';
         });
     }
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuDerecha = document.querySelector('.menu-derecha');
+
+    menuToggle.addEventListener('click', () => {
+        menuDerecha.classList.toggle('show');
+        menuToggle.style.display = menuDerecha.classList.contains('show') ? 'none' : 'block';
+    });
 });

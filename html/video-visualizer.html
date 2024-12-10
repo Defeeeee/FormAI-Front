@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../styles/navbar.css">
+  <script type="module">
+    import { redirectIfNotLoggedIn } from '../js/auth.js';
+    redirectIfNotLoggedIn();
+  </script>
 </head>
 <body>
 
@@ -24,7 +28,7 @@
           <li><a href="historial" class="active">Historial</a></li>
         </ul>
         <a href="perfil" class="profile-link">
-          <img src="../images/profile-icon.png" alt="Perfil" class="profile-icon">
+          <img src="../images/new-profile-icon.png" alt="Perfil" class="profile-icon">
         </a>
       </div>
     </nav>
