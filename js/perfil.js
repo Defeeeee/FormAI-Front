@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 const userData = await response.json();
-                nombreInput.value = userData.user || '';
+                nombreInput.value = userData.usuario || '';
                 emailInput.value = userData.email || '';
             } else {
                 console.error('Error fetching user information:', response.status);
