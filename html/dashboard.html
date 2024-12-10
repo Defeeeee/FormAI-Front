@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="../styles/navbar.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script type="module">
+    import { redirectIfNotLoggedIn } from '../js/auth.js';
+    redirectIfNotLoggedIn();
+  </script>
 </head>
 <body>
 
@@ -19,13 +23,11 @@
       </div>
       <div class="menu-derecha">
         <ul>
-          <li><a href="/" class="active">Inicio</a></li>
-          <li><a href="dashboard">Dashboard</a></li>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="dashboard" class="active">Dashboard</a></li>
           <li><a href="historial">Historial</a></li>
+          <li><a href="perfil">Perfil</a></li>
         </ul>
-        <a href="perfil" class="profile-link">
-          <img src="../images/profile-icon.png" alt="Perfil" class="profile-icon">
-        </a>
       </div>
     </nav>
   </div>
