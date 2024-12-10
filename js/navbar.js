@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (userId && token) {
         navbar.innerHTML = `
             <div class="logo">
-                <img src="../images/logo.png" alt="FōrmAI Logo">
+                <a href="/" class="logolink"><img src="../images/logo.png" alt="FōrmAI Logo"></a>
             </div>
             <div class="menu-derecha">
                 <ul>
@@ -29,27 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     } else {
+        const isActive1 = currentPage === 'register'
+        const isActive2 = currentPage === 'login'
+        console.log(currentPage, isActive1, isActive2);
         navbar.innerHTML = `
             <div class="logo">
-                <img src="../images/logo.png" alt="FōrmAI Logo">
+                <a href="/" class="logolink"><img src="../images/logo.png" alt="FōrmAI Logo"></a>
             </div>
             <div class="menu-derecha">
                 <ul>
-                    ${menuLinks}
+                    <li><a href="register" class=${isActive1}>Registrarse</a></li>
+                    <li><a href="login" class=${isActive2}>Iniciar sesión</a></li>
                 </ul>
-                <button class="btn-register">Register</button>
-                <button class="btn-login">Login</button>
             </div>
         `;
-        const registerButton = document.querySelector('.btn-register');
-        const loginButton = document.querySelector('.btn-login');
 
-        registerButton.addEventListener('click', () => {
-            window.location.href = '/register';
+        const registerButton = document.querySelector('a[href="register"]');
+        const loginButton = document.querySelector('a[href="login"]');
+
+        registerButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = 'register';
         });
 
-        loginButton.addEventListener('click', () => {
-            window.location.href = '/login';
+        loginButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = 'login';
         });
     }
 

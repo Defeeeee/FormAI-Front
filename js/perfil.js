@@ -156,3 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchUserInfo();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutButton = document.getElementById('logoutButton');
+
+    logoutButton.addEventListener('click', () => {
+        // Clear session storage
+        sessionStorage.clear();
+
+        // Redirect to login page
+        window.location.href = 'login';
+    });
+});
