@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FōrmAI - Dashboard</title>
   <link rel="stylesheet" href="../styles/dashboard.css">
+  <link rel="stylesheet" href="../styles/navbar.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,17 +13,14 @@
 
 <header class="header">
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" id="nav">
       <div class="logo">
         <img src="../images/logo.png" alt="FōrmAI Logo">
       </div>
-      <button class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
       <div class="menu-derecha">
         <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="dashboard" class="active">Dashboard</a></li>
+          <li><a href="/" class="active">Inicio</a></li>
+          <li><a href="dashboard">Dashboard</a></li>
           <li><a href="historial">Historial</a></li>
         </ul>
         <a href="perfil" class="profile-link">
@@ -87,12 +85,7 @@
   </div>
 </main>
 
-<script src="../js/auth.js"></script>
 <script src="../js/dashboard.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    redirectIfNotLoggedIn();
-  });
-</script>
+<script src="../js/navbar.js"></script>
 </body>
 </html>

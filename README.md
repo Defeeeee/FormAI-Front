@@ -7,7 +7,6 @@ FōrmAI is an AI-powered personal trainer that analyzes and corrects your gym ex
 - [Overview](#overview)
 - [Installation](#installation)
 - [Usage](#usage)
-- [API Endpoints](#api-endpoints)
 - [Development Setup](#development-setup)
 - [Contribution Guidelines](#contribution-guidelines)
 
@@ -45,35 +44,6 @@ To set up the project locally, follow these steps:
 2. Navigate to the dashboard to upload videos of your exercises.
 3. View the analysis and feedback provided by the AI.
 4. Check your video history to track your progress over time.
-
-## API Endpoints
-
-The following API endpoints are available for interacting with the backend:
-
-### Users
-
-- `POST /usuarios/register`: Register a new user.
-- `POST /usuarios/login`: Authenticate a user.
-- `GET /usuarios/:id`: Get user information by ID (admin).
-- `PUT /usuarios/:id`: Update user information (authenticated user).
-- `DELETE /usuarios/:id`: Delete a user (admin).
-- `POST /usuarios/promote/:id`: Promote a user to admin (admin).
-
-### Exercises
-
-- `GET /ejercicios`: Get all exercises (admin).
-- `POST /ejercicios`: Create a new exercise (admin).
-- `GET /ejercicios/:id`: Get exercise information by ID (admin).
-- `PUT /ejercicios/:id`: Update exercise information (admin).
-- `DELETE /ejercicios/:id`: Delete an exercise (admin).
-
-### Videos
-
-- `GET /videos`: Get all videos (admin).
-- `POST /videos`: Upload a new video (authenticated user).
-- `GET /videos/:id`: Get video information by ID (admin).
-- `DELETE /videos/:id`: Delete a video (admin).
-- `GET /videos/usuario/:id`: Get videos of a specific user (authenticated user).
 
 ## Development Setup
 
