@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="../styles/video-visualizer.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/navbar.css">
 </head>
 <body>
 
 <header class="header">
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" id="nav">
       <div class="logo">
         <img src="../images/logo.png" alt="FōrmAI Logo">
       </div>
@@ -44,11 +45,16 @@
         <h3>Predicción de la IA</h3>
         <div class="prediction-result">
         </div>
+        <div class="tooltip">
+          <i class="fas fa-info-circle"></i>
+          <span class="tooltiptext">Aquí se muestra la predicción de la IA sobre tu ejercicio.</span>
+        </div>
       </div>
     </div>
   </div>
 </main>
 
 <script src="../js/video-visualizer.js"></script>
+<script src="../js/navbar.js"></script>
 </body>
 </html>

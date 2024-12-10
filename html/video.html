@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FōrmAI - Historial de Videos</title>
-  <link rel="stylesheet" href="../styles/history.css">
+  <title>FōrmAI - Video</title>
+  <link rel="stylesheet" href="../styles/video.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../styles/navbar.css">
@@ -21,7 +21,7 @@
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="dashboard">Dashboard</a></li>
-          <li><a href="historial" class="active">Historial</a></li>
+          <li><a href="historial">Historial</a></li>
         </ul>
         <a href="perfil" class="profile-link">
           <img src="../images/profile-icon.png" alt="Perfil" class="profile-icon">
@@ -31,16 +31,27 @@
   </div>
 </header>
 
-<main class="history-container">
+<main class="video-container">
   <div class="container">
-    <h2>Historial de Videos</h2>
+    <h2>Video</h2>
 
-    <ul class="video-list">
-    </ul>
+    <div class="video-content">
+      <video id="videoPlayer" controls width="640" height="360">
+        <source src="" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+
+      <div class="video-actions">
+        <button id="deleteVideo" class="btn-delete">Eliminar Video</button>
+        <div class="loading-indicator" hidden>
+          <i class="fas fa-spinner fa-spin"></i> Procesando...
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
-<script src="../js/history.js"></script>
+<script src="../js/video.js"></script>
 <script src="../js/navbar.js"></script>
 </body>
 </html>
