@@ -35,7 +35,7 @@ To set up the project locally, follow these steps:
 
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Usage
@@ -52,7 +52,7 @@ To set up the development environment, follow these steps:
 1. Ensure you have Node.js and npm installed on your machine.
 2. Clone the repository and navigate to the project directory.
 3. Install the dependencies using `npm install`.
-4. Start the development server using `npm start`.
+4. Start the development server using `npm run dev`.
 5. Make changes to the code and test them locally.
 6. Commit your changes and push them to the repository.
 
