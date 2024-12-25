@@ -28,6 +28,10 @@
     {
       "source": "/perfil",
       "destination": "/html/perfil.html"
+    },
+    {
+      "source": "/quienes-somos",
+      "destination": "/html/quienes-somos.html"
     }
   ]
 }
