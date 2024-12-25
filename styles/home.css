@@ -7,11 +7,6 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    padding-left: 60px; /* Add left padding for separation */
-    padding-right: 60px; /* Add right padding for separation */
-    margin-right: auto; /* Ensure the container is aligned to the left */
-}
 
 h1,
 h2,
@@ -243,10 +238,6 @@ h3 {
 
 
 @media (max-width: 768px) {
-    .nav {
-        flex-direction: column; /* Stack logo and buttons vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
 
     .logo {
         margin-right: 0; /* Remove right margin on logo */

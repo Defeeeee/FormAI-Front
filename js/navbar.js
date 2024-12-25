@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         const isActive1 = currentPage === 'register'
         const isActive2 = currentPage === 'login'
-        console.log(currentPage, isActive1, isActive2);
+        const isActive3 = currentPage === 'quienes-somos'
+        console.log(currentPage, isActive1, isActive2, isActive3);
         navbar.innerHTML = `
             <div class="logo">
                 <a href="/" class="logolink"><img src="../images/logo.png" alt="FōrmAI Logo"></a>
@@ -40,12 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <ul>
                     <li><a href="register" class=${isActive1}>Registrarse</a></li>
                     <li><a href="login" class=${isActive2}>Iniciar sesión</a></li>
+                    <li><a href="quienes-somos" class=${isActive3}>Quienes Somos</a></li>
                 </ul>
             </div>
         `;
 
         const registerButton = document.querySelector('a[href="register"]');
         const loginButton = document.querySelector('a[href="login"]');
+        const quienesSomosButton = document.querySelector('a[href="quienes-somos"]');
 
         registerButton.addEventListener('click', (event) => {
             event.preventDefault();
@@ -55,6 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
         loginButton.addEventListener('click', (event) => {
             event.preventDefault();
             window.location.href = 'login';
+        });
+
+        quienesSomosButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = 'quienes-somos';
         });
     }
 
